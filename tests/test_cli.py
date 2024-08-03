@@ -26,7 +26,7 @@ class TestArgumentsModel(unittest.TestCase):
             shutil.rmtree(cls.test_root)
 
         if cls.test_root.exists():
-            shutil.rmtree(Path(os.getcwd()))
+            shutil.rmtree(Path(os.getcwd(), "output"))
 
     def test_valid_arguments(self):
         args = ArgumentsModel(

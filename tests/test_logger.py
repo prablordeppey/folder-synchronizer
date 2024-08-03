@@ -10,6 +10,7 @@ class TestMainLogger(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.root_folder = Path(os.getcwd(), "tests", "resources")
+        cls.output_folder = Path(os.getcwd(), "output")
         cls.log_file_path = cls.root_folder / "test_log.log"
 
     def setUp(self):
@@ -27,6 +28,9 @@ class TestMainLogger(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         shutil.rmtree(cls.root_folder, ignore_errors=True)
+
+        if cls.output_folder.exists():
+            shutil.rmtree(cls.output_folder)
 
     @patch("logging.getLogger")
     def test_console_logging(self, mock_get_logger):
