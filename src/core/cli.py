@@ -58,7 +58,7 @@ class ArgumentsModel(BaseModel):
         replica = values.get("replica")
 
         # Check if source directory exists
-        if not source or not source.exists():
+        if not source or not Path(source).exists():
             raise ValueError(f"The source directory '{source}' does not exist.")
 
         # Create replica directory if it does not exist
@@ -77,7 +77,7 @@ class ArgumentsModel(BaseModel):
             log_file_path = Path(os.getcwd(), "output", "logfile.log")
             values["log_file"] = log_file_path
 
-        if not log_file_path.exists():
+        if not Path(log_file_path).exists():
             log_file_path.parent.mkdir(parents=True, exist_ok=True)
 
         # Update permissions

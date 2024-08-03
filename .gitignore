@@ -1,11 +1,14 @@
-# Venv and Caches
+# Venv
 .venv
-.mypy_cache
-.ruff_cache
-.pytest_cache
-__pycache__/
 
 # Output folders
 output/
 resources/
 data/
+
+# Generated files
+.mypy_cache
+.ruff_cache
+.pytest_cache
+__pycache__/
+site/
