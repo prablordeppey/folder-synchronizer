@@ -1,0 +1,11 @@
+# Venv and Caches
+.venv
+.mypy_cache
+.ruff_cache
+.pytest_cache
+__pycache__/
+
+# Output folders
+output/
+resources/
+data/
