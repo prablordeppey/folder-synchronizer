@@ -1,16 +1,35 @@
 site_name: Folder Synchronizer
+site_description: A description of my project.
+site_author: Your Name
 nav:
   - Home: index.md
+  - Installation: installation.md
   - Usage: usage.md
-  - API Reference: api_reference.md
+  - Code Reference:
+    - helpers:
+      - synchronizer: reference/core/synchronizer.md
+      - cli: reference/core/cli.md
+      - utils: reference/core/utils.md
+      - logger: reference/core/logger.md
+    - packages:
+      - folder_synchronizer_server: reference/folder_synchronizer_server/main.md
+      - folder_synchronizer_simple: reference/folder_synchronizer_simple/main.md
 
 theme:
   name: material
 
 markdown_extensions:
+  - admonition
   - codehilite
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.superfences
   - toc:
       permalink: true
 
 plugins:
   - search
+  - gen-files:
+      scripts:
+      - scripts/gen_ref_pages.py  
+  - mkdocstrings
