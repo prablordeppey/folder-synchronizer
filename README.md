@@ -15,3 +15,11 @@
 - **`folder_synchronizer_server`**: Offers a REST API interface for more flexible and interactive synchronization management, ideal for integration into larger systems or for users who prefer managing synchronization through HTTP requests.
 
 The project combines practical synchronization capabilities with robust logging and configuration management, making it adaptable for various use cases and environments.
+
+## Installation
+
+For installation instructions, [visit here](docs/installation.md).
+
+## Usage
+
+For usage instructions, [visit here](docs/usage.md).

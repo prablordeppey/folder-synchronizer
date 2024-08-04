@@ -4,12 +4,9 @@ Folder Synchronizer is a versatile Python application designed to synchronize di
 
 ## Table of Contents
 
-- [Setup and Installation](#setup-and-installation)
-  - [Prerequisites](#prerequisites)
-  - [Creating the Virtual Environment](#creating-the-virtual-environment)
-  - [Installing Dependencies](#installing-dependencies)
-
-## Setup and Installation
+- [Prerequisites](#prerequisites)
+- [Creating the Virtual Environment](#creating-the-virtual-environment)
+- [Installing Dependencies](#installing-dependencies)
 
 ### Prerequisites
 
@@ -17,6 +14,7 @@ Ensure you have the following installed:
 
 - Python 3.12
 - Poetry
+- The repository is cloned from [here](https://github.com/prablordeppey/folder-synchronizer).
 
 ### Creating the Virtual Environment
 
