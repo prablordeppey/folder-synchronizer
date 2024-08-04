@@ -31,8 +31,8 @@ jobs:
       run: |
         poetry install --no-root
         poetry install --only=dev
-        poetry install -E=simple
-        poetry install -E=server
+        poetry install -E simple
+        poetry install -E server
 
     - name: Run linting
       run: |
