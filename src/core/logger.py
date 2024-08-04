@@ -15,7 +15,7 @@ class MainLogger:
     """
 
     def __init__(
-        self, name: str, log_file: Optional[Path] = None, log_level: int = logging.INFO, overwrite: bool = False
+        self, name: str, log_file: Optional[Path] = None, log_level: int = logging.DEBUG, overwrite: bool = False
     ) -> None:
         """
         Initialize the MainLogger with the specified module name and optional file logging.
@@ -24,7 +24,7 @@ class MainLogger:
             name (str): The name of the module or application using the logger.
             log_file (Optional[Path], optional): The path to the log file. If not provided,
                 logging will be only to the console. Defaults to None.
-            log_level (int, optional): The logging level to set for the logger and handlers. Defaults to logging.INFO.
+            log_level (int, optional): The logging level to set for the logger and handlers. Defaults to logging.DEBUG.
             overwrite (bool, optional): If True, the log file will be overwritten each time the logger is initialized.
                 If False, logs will be appended to the file. Defaults to False.
 
@@ -35,9 +35,11 @@ class MainLogger:
             >>> logger = MainLogger(
                     name="my_module",
                     log_file=Path("/path/to/logfile.log"),
-                    log_level=logging.DEBUG, overwrite=True
+                    log_level=logging.INFO, overwrite=True
                 )
+
             >>> logger.logger.info("This is an info message.")
+
             >>> logger.logger.error("This is an error message.")
         """
         self.logger = logging.getLogger(name or __name__)
