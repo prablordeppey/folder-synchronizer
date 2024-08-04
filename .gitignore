@@ -13,6 +13,7 @@ data/
 __pycache__/
 site/
 .coverage
+.poetry.lock
 
 # Exempt dirs
 .github/
