@@ -27,10 +27,12 @@ class TestMainLogger(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        shutil.rmtree(cls.root_folder, ignore_errors=True)
+        # Cleanup directories
+        if cls.root_folder.exists():
+            shutil.rmtree(cls.root_folder, ignore_errors=True)
 
         if cls.output_folder.exists():
-            shutil.rmtree(cls.output_folder)
+            shutil.rmtree(cls.output_folder, ignore_errors=True)
 
     @patch("logging.getLogger")
     def test_console_logging(self, mock_get_logger):

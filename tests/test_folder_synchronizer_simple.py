@@ -11,7 +11,7 @@ from core.logger import MainLogger
 from core.synchronizer import FolderSynchronizer
 
 
-class TestFolderSynchronizer(unittest.TestCase):
+class TestFolderSynchronizerSimple(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # Define paths for the test
