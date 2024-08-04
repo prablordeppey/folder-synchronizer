@@ -1,19 +1,19 @@
 site_name: Folder Synchronizer
-site_description: A description of my project.
-site_author: Your Name
+site_description: A tool for synchronizing a source folder with a replica folder, either via simple periodic syncing or a REST API server.
+site_author: Prosper Ablordeppey
 nav:
   - Home: index.md
   - Installation: installation.md
   - Usage: usage.md
   - Code Reference:
-    - helpers:
-      - synchronizer: reference/core/synchronizer.md
-      - cli: reference/core/cli.md
-      - utils: reference/core/utils.md
-      - logger: reference/core/logger.md
-    - packages:
-      - folder_synchronizer_server: reference/folder_synchronizer_server/main.md
-      - folder_synchronizer_simple: reference/folder_synchronizer_simple/main.md
+      - helpers:
+          - synchronizer: reference/core/synchronizer.md
+          - cli: reference/core/cli.md
+          - utils: reference/core/utils.md
+          - logger: reference/core/logger.md
+      - packages:
+          - folder_synchronizer_server: reference/folder_synchronizer_server/main.md
+          - folder_synchronizer_simple: reference/folder_synchronizer_simple/main.md
 
 theme:
   name: material
@@ -31,5 +31,5 @@ plugins:
   - search
   - gen-files:
       scripts:
-      - scripts/gen_ref_pages.py  
+        - scripts/gen_ref_pages.py
   - mkdocstrings
