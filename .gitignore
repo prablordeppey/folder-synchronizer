@@ -13,3 +13,6 @@ data/
 __pycache__/
 site/
 .coverage
+
+# Exempt dirs
+.github/
