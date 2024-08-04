@@ -50,9 +50,8 @@ jobs:
       run: |
         poetry run mkdocs build
 
-    - name: Serve documentation
-      if: github.event_name == 'push'
-      run: |
-        poetry run mkdocs serve --dev-addr 0.0.0.0:8000
-      env:
-        PORT: 8000
+    - name: Upload documentation artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: documentation
+        path: docs
