@@ -11,14 +11,14 @@ def main() -> None:
     Main entry point for the folder synchronization script for the simple case.
 
     This function sets up the argument parser for the script, which allows users to specify:
-    
+
     - The path to the source folder that will be synchronized.
     - The path to the replica folder that will be updated.
     - The interval, in seconds, at which the synchronization should occur.
     - The path to the log file where synchronization activities will be recorded.
 
     The function performs the following steps:
-    
+
     1. Parses command-line arguments to retrieve the source folder, replica folder, synchronization interval,
         and log file path.
     2. Configures logging based on the specified log file path using the `setup_logging` function.

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Dict, Union
+from typing import Dict
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
@@ -87,7 +87,7 @@ def root():
     and the parameters provided via the command-line interface.
 
     **Responses:**
-    
+
     - **200 OK**: Returns the current synchronization count and the command-line arguments.
     - **500 Internal Server Error**: If an error occurs while retrieving the synchronization status.
 
@@ -98,7 +98,7 @@ def root():
 
 
 @app.get("/get_sync_params/", response_model=ArgumentsModel)
-def get_sync_params() -> Union[str, int]:
+def get_sync_params() -> ArgumentsModel:
     """
     Retrieve the current synchronization parameters.
 

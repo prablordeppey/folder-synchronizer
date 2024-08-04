@@ -34,7 +34,7 @@ class FolderSynchronizer:
         Recursively synchronize the `replica` folder to match the `source` folder.
 
         This method performs a two-way synchronization:
-        
+
         1. **Copying Files and Directories**:
             - Recursively copies new or updated files and directories from `source_path` to `replica_path`.
             - Directories are created in the replica if they do not exist.
@@ -55,7 +55,7 @@ class FolderSynchronizer:
 
         Example:
             >>> synchronizer = FolderSynchronizer()
-            
+
             >>> synchronizer.sync_folders(Path("/path/to/source"), Path("/path/to/replica"))
         """
         # Synchronize files and directories from source_path to replica_path.

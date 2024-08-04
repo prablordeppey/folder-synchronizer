@@ -116,7 +116,7 @@ class ArgumentsModel(BaseModel):
 def arguments_parser() -> ArgumentsModel:
     """
     Uses `argparse` for argument parsing and `pydantic` for validation.
-    
+
     Does the following:
         - parse command-line arguments
         - validate them against the `ArgumentsModel` model
